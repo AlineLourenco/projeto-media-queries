@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto de Media Query</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"rel="stylesheet" />
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estilos/media-query.css">
+  <link rel="shortcut icon" href="/mq005/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body onresize="mudouTamanho()">
+  <header>
+    <h1>Meu Site</h1>
+    <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+      menu
+    </span>
+    <menu id="itens">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Página 01</a></li>
+        <li><a href="#">Página 02</a></li>
+        <li><a href="#">Página 03</a></li>
+        <li><a href="#">Página 04</a></li>
+      </ul>
+    </menu>
+  </header>
+  <main>
+    <article>
+      <h2>Testando Media Queries</h2>
+      <p>O conceito de Mobile First foi elaborado por Luke Wroblewski em 2009 e 2010 no seu blog e no ano seguinte ele publicou através da A Book Apart o livro Mobile First que é uma leitura obrigatória para aqueles que queiram compreender a fundo a técnica e suas aplicabilidades.</p>
+
+      <p>Mobile first é um projeto que faz a criação de projetos web e sites primeiro em dispositivos móveis, para depois fazer adaptações para o desktop e outras plataformas, ao contrário do que ainda acontece na maioria das vezes.</p>
+
+      <p>Quando projetamos primeiramente para mobile somos forçados a sermos sucintos e fazer uso da melhor maneira dos poucos espaços disponíveis nas telas dos dispositivos móveis e auxiliar os usuários a realizarem suas desejadas tarefas.</p>
+
+      <p>Os projetos web de uma forma geral precisam aplicar este conceito para explorar seu potencial e facilitar, além de uma melhor experiência para os usuários, o uso da segunda tela pelos usuários.</p>
+
+    </article>
+  </main>
+  <script>
+
+    function mudouTamanho() {
+      if (window.innerWidth >= 768) {
+        itens.style.display = 'block'
+      } else {
+        itens.style.display = 'none'
+      }
+    }
+
+    function clickMenu() {
+      if (itens.style.display == 'block') {
+        itens.style.display = 'none'
+      } else {
+        itens.style.display = 'block'
+      }
+    }
+  </script>
+</body>
+</html>
